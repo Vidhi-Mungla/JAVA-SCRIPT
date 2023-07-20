@@ -6,16 +6,21 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-
+    nav{
+        position: relative;
+        height: 70px;
+    }
         ul
         {
             background-color: aquamarine;
             margin: 0;
             padding: 0;
             text-align: center;
+                  
         }
 
         li
@@ -39,7 +44,14 @@
             display: block;
          }
 
+       .close{
+        position: absolute;
+        top: 0%;
+        right: 0%;
+         display: block;
+         cursor: pointer;
 
+       }
         @media(max-width:500px)
         {
 
@@ -53,13 +65,16 @@
          background-color: aquamarine;
          text-align: center;
         }
-
+       
        }
     </style>
 </head>
 <body>
-     
+     <nav>
     <span ><i class="fa fa-bars" id="bar" onclick="bar()"></i>
+    </span>
+    <span class="close" id="d" >
+        <i class="fa-solid fa-xmark" onclick="close()"></i>
     </span>
 
     <ul id="menu">
@@ -69,16 +84,35 @@
         <li><a href="">News</a></li>
         <li><a href="">Sports</a></li>
     </ul>
-
+</nav>
 <script>
 
-  baricon =  document.getElementById('bar');
-  menubar = document.getElementById('menu');
+ var baricon =  document.getElementById('bar');
+ var ul = document.getElementById('menu')
+
        
      function bar()
      {
-        
+         ul.style.display="block";
+         var li = document.querySelectorAll('li');
+
+         for(i=0;i<=li.length;i++)
+         {
+          li[i].style.display="block";
+         }
+  var c = document.getElementById('d');
+     c.style.opacity="1";
+      
      } 
+
+     function close()
+     {
+        for(i=0;i<=li.length;i++)
+         {
+          li[i].style.display="inline";
+
+         }
+     }
 
 </script>
 
