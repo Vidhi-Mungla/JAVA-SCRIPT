@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+
+        ul
+        {
+            background-color: aquamarine;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        li
+        {
+           display: inline;
+           padding: 25px;
+        }
+
+        a
+        {
+            text-decoration: none;
+            color: black;
+        }
+
+         span
+         {
+            background-color: aquamarine;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: block;
+         }
+
+
+        @media(max-width:500px)
+        {
+
+        ul
+        {
+            display: none;
+        }  
+
+        i
+        {
+         background-color: aquamarine;
+         text-align: center;
+        }
+
+       }
+    </style>
+</head>
+<body>
+     
+    <span ><i class="fa fa-bars" id="bar" onclick="bar()"></i>
+    </span>
+
+    <ul id="menu">
+        <li><a href="">Home</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">My Feed</a></li>
+        <li><a href="">News</a></li>
+        <li><a href="">Sports</a></li>
+    </ul>
+
+<script>
+
+  baricon =  document.getElementById('bar');
+  menubar = document.getElementById('menu');
+       
+     function bar()
+     {
+        
+     } 
+
+</script>
+
+</body>
+</html>

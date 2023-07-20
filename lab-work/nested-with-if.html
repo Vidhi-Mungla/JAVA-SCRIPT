@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // for(r=1;r<=5;r++)
+        // {
+        //     for(c=1;c<=5;c++)
+        //     {
+        //         document.write(" * "); //print  *****
+        //                                       //*****
+        //                                       //*****
+        //                                       //*****
+        //                                       //*****
+
+        //     }
+        //     document.write("<br>")
+        // }
+
+
+        // for(r=1;r<=5;r++)
+        // {
+        //     for(c=1;c<=r;c++)
+        //     {
+        //         document.write(" * "); //print  *
+        //                                       //**
+        //                                       //***
+        //                                       //****
+        //                                       //*****
+
+        //     }
+        //     document.write("<br>")
+        // }
+    
+
+        // for(r=1;r<=5;r++)
+        // {
+        //     for(c=1;c<=r;c++)
+        //     {
+        //       if(r%2 != 0)
+        //       {
+        //         document.write("A")
+        //       }                        
+        //       else
+        //       {
+        //         document.write("B")     //print
+        //                                 //A
+        //                                 //B B 
+        //                                 //A A A
+        //                                 //B B B B
+        //                                 //A A A A A
+
+        //       }
+        //     }
+        //     document.write("<br>")
+        // }
+
+        for(r=5;r>=1;r--)
+        {
+            for(c=1;c<=r;c++)
+            {
+              if(r%2 != 0)
+              {
+                document.write("A")
+              }                        
+              else
+              {
+                document.write("B")     //print
+                                        //A A A A A
+                                        //B B B B
+                                        //A A A
+                                        //B B 
+                                        //A 
+
+              }
+            }
+            document.write("<br>")
+        }
+    
+
+    </script>
+</body>
+</html>

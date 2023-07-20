@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img id="i1" src="" alt="" height="200px" width="200px">
+
+    <img id="i2" src="img1.jpg" alt="" height="200px" width="200px">
+
+    <img id="i3" src="img1.jpg" alt="" height="200px" width="200px">
+
+    <button onclick="setimg()">setimages</button>
+    <button onclick="changeimg()">change image</button>
+    <button onclick="changeimgs()">change images</button>
+
+    <script>
+      
+      img1 = document.getElementById("i1");
+      img2 = document.getElementById("i2");
+      img3 = document.getElementById("i3");
+
+      function setimg()
+      {
+        img1.src="img1.jpg";
+      }
+
+
+
+      function changeimg()
+      {
+        img2.src="img2.jpg"
+      }
+
+      
+
+      function changeimgs()
+      {
+        if(img3.src.match("img1.jpg"))
+        {
+            img3.src="img2.jpg";
+        }
+        else
+        {
+            img3.src="img1.jpg";
+        }
+      }
+
+    </script>
+</body>
+</html>

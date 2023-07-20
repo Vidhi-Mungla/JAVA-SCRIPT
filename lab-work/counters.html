@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h"></h1>
+    <script>
+        h1_tag = document.getElementById('h');
+     
+    // program to display a text using Interval method
+
+    //     x=0;
+    //     function count()
+    //     {
+    //         h1_tag.innerHTML = ++x;
+    //         if(x==900)
+    //         {
+    //               clearInterval(c)
+    //         }
+    //     }
+    //    c= setInterval("count()",10);
+
+
+     
+   
+    // program to display a text using setTimeout method
+
+    x=0
+    function count() 
+    {
+        h1_tag.innerHTML = ++x;
+        if(x<=99)
+        {
+            setTimeout(count, 10);
+
+        }
+    }
+    count() 
+
+    </script>
+</body>
+</html>

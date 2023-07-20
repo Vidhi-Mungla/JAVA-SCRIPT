@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Price:
+    <input type="text" value="1200" id="inp">
+
+    <select name="" id="sel" onchange="GetPrice()">
+        <option hidden>--- Select Quantity ---</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option >3</option>
+        <option value="4">4</option>
+        <option value="100">5</option>
+    </select>
+
+    <b id="res"></b>
+
+    <script>
+
+      input =  document.getElementById('inp');
+     select  =  document.getElementById('sel');
+     b = document.getElementById('res');
+
+     console.log(input);
+     console.log(input.value);
+
+     console.log(select);
+     console.log(select.value);
+
+     console.log(input.value * select.value);//1200 * 1
+
+     function GetPrice()
+     {
+        // document.write(input.value * select.value);
+
+         b.innerHTML = input.value * select.value;
+
+        
+     }
+    </script>
+    
+</body>
+</html>

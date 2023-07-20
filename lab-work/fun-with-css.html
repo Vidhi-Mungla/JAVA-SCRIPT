@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+       .abc
+       {
+           height: 50px;
+           width: 100px;
+           background-color: gray;
+       }
+
+    </style>
+</head>
+<body>
+
+    <h1 id="h">Riddhi</h1>
+
+    <button id="btn" onclick="addcss()">start</button>
+
+    <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nobis odio laudantium incidunt consequuntur commodi cumque eveniet dolor ducimus reprehenderit corporis, accusantium, qui alias necessitatibus atque nihil non nisi esse!</p>
+    
+
+    <script>
+      
+      var h1_tag = document.getElementById('h');
+      var p_tag = document.getElementById('para');
+      var b_tag = document.getElementById('btn');
+
+    //   p_tag.style.color="blue";
+    //   p_tag.style.height="300px";
+    //   p_tag.style.width="100px";
+    //   p_tag.style.backgroundColor="pink";
+      
+    //   h1_tag.style.color="red";
+    //   h1_tag.style.height="50px";
+    //   h1_tag.style.width="100px";
+    //   h1_tag.style.backgroundColor="yellow";
+     
+    
+//    2 type of class define or create 
+// 1)
+
+    p_tag.className="abc";
+    h1_tag.className="xyz";
+
+// 2)
+
+    // p_tag.classList.add('xyz');
+    // p_tag.classList.remove('xyz');
+    // p_tag.classList.toggle('xyz');
+
+    function addcss()
+    {
+    //varname.style.property = "value";
+      h1_tag.style.color="red";
+      h1_tag.style.height="50px";
+      h1_tag.style.width="100px";
+      h1_tag.style.backgroundColor="yellow";
+
+      b_tag.innerHTML ="Stop";
+      
+    }
+
+      console.log(b_tag);
+
+    </script>
+</body>
+</html>

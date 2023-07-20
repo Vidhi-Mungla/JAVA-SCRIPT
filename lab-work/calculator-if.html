@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form {
+            width: 500px;
+            height: 500px;
+            border: 2px solid black;
+            margin: 55px auto;
+            background-color: cadetblue;
+            border: 3px solid rgb(26, 86, 88);
+        }
+
+        input {
+            width: 80%;
+            height: 50px;
+            display: block;
+            margin: 33px auto;
+            font-size: 25px;
+            padding-left: 22px;
+            font-weight: bold;
+            border: 1px solid rgb(26, 86, 88);
+        }
+
+        button {
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            margin-left: 33px;
+            cursor: pointer;
+            border: 1px solid rgb(26, 86, 88);
+
+        }
+        button:nth-child(3),button:nth-child(4){
+            width: auto;
+           margin-left: 64px;
+        }
+        select{
+            width: 150px;
+            height: 50px;
+            font-size: 30px;
+            margin-left: 175px;
+        }
+        button{
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <input type="text" name="" id="i1" placeholder="enter operand 1" value="">
+          <select name="" id="ch">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+          </select>
+        <input type="text" name="" id="i2" placeholder="enter operand 2" value="">
+        <button onclick="test()">Calculate</button>
+        <button onclick="reset()">Reset</button>
+        <input type="text" name="" id="res" placeholder="Answer" value="">
+
+    </div>
+    <script>
+        var input1= document.getElementById('i1');
+        var input2= document.getElementById('i2');
+        var final= document.getElementById('res');
+        var select= document.getElementById('ch');
+        var btn = document.getElementsByTagName('button');
+
+        var operator = select.value;
+      
+  function test()
+  {
+    if(select.value=="+")
+    {
+       var result = Number(input1.value)+Number(input2.value);
+        final.value=result;
+    }
+    if(select.value=="-")
+    {
+       var result = (input1.value)-(input2.value);
+        final.value=result;
+    }
+    if(select.value=="*")
+    {
+       var result = (input1.value)*(input2.value);
+        final.value=result;
+    }
+    if(select.value=="/")
+    {
+       var result = (input1.value)/(input2.value);
+        final.value=result;
+    }
+    if(select.value=="%")
+    {
+       var result = (input1.value)%(input2.value);
+        final.value=result;
+    }
+    }
+
+    function reset()
+    {
+        input1.value="";
+        input2.value="";
+        final.value="";
+    }
+    </script>
+</body>
+
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    Variable/Identifier: to store values
+
+    3 ways to declare a variable in JS 
+
+    1. using var (keywords) ==> keywords => reserved words
+    2. using let 
+    3. using const
+
+    Syntax:
+
+global/local scope of a variable..
+
+    var varname = value; (Default)
+    let varname = value; 
+    const varname = value; (fixed--cant change)
+
+    Rules:
+    1. var name can not start with a number
+
+    var x1dfg ==> correct 
+    var 1x ==> incorrect
+
+    2. var name can not contain space/ any operators and special characters
+
+    var _na_me ===> corrext 
+    var na +me ==> incorrect
+    
+    3. var name cant be KEYWORDS 
+
+    var switch =34;==> incorrect 
+    var switch1 = 34 ==> correct 
+
+    document.write(varName);
+    console.log(varName);
+    document.getElementById('idname').innerHTML/innerText = varname;
+
+-->
+
+
+    <script>
+
+      var x = 1;//declaration
+      var x = true;// re-declaration ALLOWED
+      x ="var Keyword...!";/// re-assignment ALLOWED
+
+      console.log(x);
+
+      let y = 1;//declaration
+      //let y = true;// re-declaration NOT ALLOWED
+      y ="LET Keyword...!";/// re-assignment ALLOWED
+
+      console.log(y);
+
+
+      const z = "CONST";//declaration
+     // const z = true;// re-declaration NOT ALLOWED
+     // z ="var Keyword...!";/// re-assignment NOT ALLOWED
+
+      console.log(z);
+
+    </script>
+
+
+    
+</body>
+</html>

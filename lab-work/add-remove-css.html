@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .add
+    {
+      color: blue;
+    }
+      </style>
+    
+<body>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolore minus? Assumenda dolores labore vel commodi doloremque. Voluptatum iusto tenetur minima quis, quam et voluptates inventore. Aliquid reprehenderit at soluta?</p>
+    
+    <button onclick="addcss()">add css</button>
+    <button onclick="removecss()">remove css</button>
+    <button onclick="addremovecss()">add-remove css</button>
+
+    <script>
+    p=document.getElementById("para");
+
+    function addcss()
+    {
+        // p.style.color="red";
+        // p.classList.add('add');
+        p.className='add';
+    }
+
+    function removecss()
+    {
+        // p.style.color='#000';
+        // p.style.color='';
+        // p.className='';
+        p.classList.remove('add');
+    }
+
+    function addremovecss()
+    {
+        // p.classList.toggle('add');
+        if(p.style.color == "")
+        {
+            p.style.color = "red";
+        }
+        else
+        {
+            p.style.color="";
+        }
+    }
+
+    </script>
+</body>
+</html>
