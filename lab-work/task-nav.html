@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      div {
+        background: lightseagreen;
+        text-align: center;
+        word-spacing: 20px;
+        line-height: 50px;
+      }
+      i {
+        font-size: px;
+      }
+      span {
+        display: none;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        /* display: none; */
+      }
+      li {
+        display: inline;
+        font-size: 30px;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .xyz {
+        display: block;
+      }
+
+      @media (max-width: 500px) {
+        ul {
+          display: none;
+        }
+        span {
+          display: block;
+        }
+        li {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span id="sp" onclick="btn()"><i class="fa fa-bars"></i></span>
+      <ul id="ul">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">News</a></li>
+        <li><a href="">Sports</a></li>
+        <li><a href="">NewFeed</a></li>
+      </ul>
+    </div>
+
+    <script>
+      ul = document.getElementById("ul");
+      sp = document.getElementById("sp");
+
+      // sp.style.display = "none";
+      // function btn(){
+      // ul.style.display = "block";
+      // ul.classList.toggle('xyz');
+      // }
+
+      function btn() {
+        if (ul.style.display === "none")
+         {
+          ul.style.display = "block";
+         }
+         else
+         {
+          ul.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
