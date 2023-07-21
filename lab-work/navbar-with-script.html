@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+   div
+   {
+    background-color: burlywood;
+    text-align: center;
+    word-spacing: 20px;
+    line-height: 50px;
+   }
+   i
+   {
+    font-size: 30px;
+   }
+   span
+   {
+    display: none;
+   }
+   ul
+   {
+    margin: 0;
+    padding: 0;
+   }
+   li
+   {
+    display: inline;
+    font-size: 25px;
+   }
+   a{
+    text-decoration: none;
+    color: black;
+   }
+   .abc
+    {
+        display: block;
+    }
+
+    @media(max-width : 500px)
+    {
+  ul
+  {
+    display: none;
+  }
+  span
+  {
+    display: block;
+  }
+    li
+    {
+        display: block;
+        font-size: 20px;
+    }
+
+
+    }
+</style>
+<body>
+
+    <div>
+ <span id="sp" onclick="bar()"><i class="fa fa-bars"></i></span>
+<ul id="menu">
+    <li><a href="">Home</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">News</a></li>
+    <li><a href="">Sports</a></li>
+    <li><a href="">NewFeed</a></li></ul>
+    </div>
+</body>
+<script>
+
+    menu = document.getElementById('menu')
+    span= document.getElementById('sp')
+
+    
+    //   span.style.display = "none";
+    //   function bar()
+    //   {
+    //   menu.style.display = "block";
+    //   menu.classList.toggle('xyz');
+    //   }
+
+    function bar()
+    {
+        if(menu.style.display === "none")
+        {
+           menu.style.display="block";
+        }
+        else
+        {
+         menu.style.display="none";
+        }
+    }
+</script>
+</html>

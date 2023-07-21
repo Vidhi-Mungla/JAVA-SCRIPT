@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Recursive Function:
+    Function calls itself
+
+    function functionName()
+    {
+        ...code;
+        functionName();
+    }
+
+    functionName() -->
+
+
+    <script>
+
+        // function t()
+        // {
+        //     document.write("recursive function...<br>");
+        //     t()
+        // }
+        // t()
+
+        x=1;
+
+        function t()
+        {
+           if(x<=2)//6<=5
+           {
+            document.write("recursive function...<br>");
+            x++;//6
+            t()
+           }
+        }
+        t()
+       
+
+    </script>
+
+
+
+    
+   
+</body>
+</html>

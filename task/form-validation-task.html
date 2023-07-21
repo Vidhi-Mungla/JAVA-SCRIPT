@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+   <form onsubmit="return ValidateForm()">
+
+    Name: <input type="text" name="" id="nm" onblur="return ValidateForm()">
+    <b id="nmErr"></b>
+<br><br>
+    Mobile: <input type="text" name="" id="mb" onblur="return ValidateForm()">
+    <b id="mbErr"></b>
+    <br>
+    <br>
+    <!-- <input type="submit" value="Validate" onclick="return ValidateForm()"> -->
+
+    <!-- <input type="submit" value="Validate"> -->
+
+    <!-- <input type="submit" value="Validate" onclick=" ValidateForm()"> -->
+   </form>
+
+
+
+
+    <script>
+
+        name1 = document.getElementById('nm');
+        nmErr = document.getElementById('nmErr');
+        mobile = document.getElementById('mb');
+        mbErr = document.getElementById('mbErr');
+
+        console.log(name1);
+        console.log(name1.value);
+
+        //===> /^exp$/
+        
+
+        nm_ex = /^[a-zA-Z]{2,4}$/;
+        mb_ex = /^[0-9]{10}$/;
+
+        function ValidateForm()
+        {
+            
+            if( name1.value==  "")
+            {
+               //document.write("required..!");
+               nmErr.innerHTML =" *Required..!"; 
+               nmErr.style.color ="red";
+               name1.style.border="2px solid red";
+
+               mbErr.innerHTML =" *Required..!"; 
+               mbErr.style.color ="red";
+               mobile.style.border="2px solid red";
+               return false;
+
+            }
+            else if(!nm_ex.test(name1.value))
+            {
+                nmErr.innerHTML =" *min 2 and max 4 Letters only..!"; 
+                return false;
+              
+            }
+
+            else if(!mb_ex.test(mobile.value))
+            {
+                mbErr.innerHTML ="only numbers and only 10 numbers valid!"; 
+                return false;
+              
+            }
+
+            else 
+            {
+                nmErr.innerHTML="";
+                name1.style.border="2px solid green";
+                
+                mbErr.innerHTML="";
+                mobile.style.border="2px solid green";
+                return false;
+            }
+
+            // if( mobile.value==  "")
+            // {
+            //     alert("Mobile is required...!");
+            //     return false;
+            // }
+        }
+
+        //alert("Name is required...!");
+    </script>
+    
+</body>
+</html>
