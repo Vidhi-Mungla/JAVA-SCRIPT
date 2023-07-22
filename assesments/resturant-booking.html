@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+</style>
+<body>
+    <form id="bookingForm">
+        <table border="2" style="background-color: pink;">
+    <tr>
+      <td><label for="bookingType">Choice of booking:</label></td>  
+      <td> <select id="bookingType" onchange="updateForm()">
+          <option value="fullDay">Full day booking</option>
+          <option value="halfDay">Half day booking</option>
+          <option value="hourly">Hourly booking</option>
+        </select></td> 
+    </tr>
+    
+      <tr>
+       <td> <label for="userName">User name:</label></td>
+        <td><input type="text" id="userName" required> </td>
+    </tr>
+
+    <tr>
+       <td><label for="mobileNumber">Mobile Number:</label></td> 
+        <td><input type="tel" id="mobileNumber" required> </td>
+    </tr>
+
+    <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="email" id="email" required></td> 
+    </tr> 
+
+       <tr>
+       <td> <label for="numOfPersons">No of person:</label></td>
+        <td><input type="number" id="numOfPersons" required></td> 
+    </tr>
+
+    <tr>
+        <div id="dateContainer">
+         <td><label for="date">Date:</label></td> 
+          <td><input type="date" id="date" required> </td>
+        </div>
+    </tr>
+
+    <tr>
+        <div id="slotContainer">
+         <td><label for="slot">Slot:</label></td> 
+          <td><select id="slot" required>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+          </select> </td>
+    </tr>  </div>
+      
+    <tr>
+        <div id="timeContainer">
+          <td><label for="time">Time:</label></td>
+          <td><input type="time" id="time" required></td>
+        </div> 
+    </tr>  
+        
+    <tr>
+        <td><button type="submit">Submit</button></td>
+    </tr>
+    </table>
+      </form>
+</body>
+<script>
+
+function updateForm() {
+  const bookingType = document.getElementById("bookingType").value;
+  const dateContainer = document.getElementById("dateContainer");
+  const slotContainer = document.getElementById("slotContainer");
+  const timeContainer = document.getElementById("timeContainer");
+
+  dateContainer.style.display = "none";
+  slotContainer.style.display = "none";
+  timeContainer.style.display = "none";
+
+  if (bookingType === "fullDay") {
+    dateContainer.style.display = "block";
+  } else if (bookingType === "halfDay") {
+    dateContainer.style.display = "block";
+    slotContainer.style.display = "block";
+  } else if (bookingType === "hourly") {
+    dateContainer.style.display = "block";
+    timeContainer.style.display = "block";
+  }
+}
+
+document.getElementById("bookingForm").addEventListener("submit", function(event)
+ {
+  event.preventDefault(); 
+  const bookingType = document.getElementById("bookingType").value;
+  const userName = document.getElementById("userName").value;
+  const mobileNumber = document.getElementById("mobileNumber").value;
+  const email = document.getElementById("email").value;
+  const numOfPersons = document.getElementById("numOfPersons").value;
+  const date = document.getElementById("date").value;
+  const slot = document.getElementById("slot").value;
+  const time = document.getElementById("time").value;
+
+
+  console.log("Choice of booking:", bookingType);
+  console.log("User name:", userName);
+  console.log("Mobile Number:", mobileNumber);
+  console.log("Email:", email);
+  console.log("No of person:", numOfPersons);
+  console.log("Date:", date);
+  console.log("Slot:", slot);
+  console.log("Time:", time);
+}
+);
+
+</script>
+</html>
