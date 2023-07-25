@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+        Array : collection of values of any datatype
+
+    Syntax : 
+
+    var/let/const varName = [v1,v2,...,vN];
+
+     document.write(varName); //v1,v2,...,vN];
+
+    document.write(varName[index]);
+
+    Array INDEX/KEYS/POSITIONS always starts WITH ZERO (0)
+
+    var x = [1,2,3]
+    let x = [1,2,3]
+    const x = [1,2,3]
+
+    document.write(x[0]);//1
+     document.write(x[1]);//2
+      document.write(x[2]);//3  
+
+      Array SIZE = Total no. of values/elements stored;
+
+      to find size 
+
+      varname.length
+
+
+-->
+    <script>
+        const x= ["joishf",2,4,5,12,"sdfsd"];
+
+        document.write(x.length);//6
+        document.write("<br><br>")
+
+       document.write(x);
+       document.write("<br><br>")
+       document.write(x[0]);
+       document.write("<br>")
+       document.write(x[1]);
+       document.write("<br>")
+       document.write(x[2]);
+       document.write("<br>")
+       document.write(x[3]);
+       document.write("<br>")
+       document.write(x[4]);
+       document.write("<br>")
+       document.write(x[5]);
+       document.write("<br>")
+       document.write("<br>")
+       document.write("<br>")
+       document.write("<br>")
+
+
+       for(n=0;n<x.length;n++)
+       {
+        document.write(x[n]);
+        document.write("<br>")
+       }
+    </script>
+
+
+  
+    
+</body>
+</html>

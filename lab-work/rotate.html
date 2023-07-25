@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.rotate
+{
+    height: 500px;
+    width: 50%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.first
+{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background: url(../lab-work/img1.jpg);
+    background-size: 100% 100%;
+    animation: rotation 3s infinite linear;
+
+}
+  .second
+{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background: url(../lab-work/img2.jpg);
+    background-size: 100% 100%;
+    animation: rotation 3s infinite linear;
+
+
+
+}
+  .rotate .second img
+  {
+  width: 300px;
+  animation: rotation 3s infinite linear;
+ 
+  }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg) translateY(300px);
+  }
+  to {
+    transform: rotate(360deg)  translateY(0px);
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="rotate">
+
+        <div class="first">
+        </div>
+        
+        <div class="second">
+        </div>
+    </div>
+   
+</body>
+</html>

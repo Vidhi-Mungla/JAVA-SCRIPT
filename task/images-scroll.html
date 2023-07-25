@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .squar{
+        height: 100px;
+        width: 100px;
+        background: blue;
+        text-align: center;
+        line-height:100px;
+        position: fixed;
+        top: 20px;
+        left: 600px;
+        transform: rotate(0deg);
+        transition: 1s;
+    }
+
+    </style>
+</head>
+<body onscroll="scrollEffect()">
+    <div class="squar" id="sq" >hello</div>
+    <script>
+        const x=[1,2,3,4,5,6,7];
+        document.write(x[0]);
+        document.write("<br>");
+        var squar=document.getElementById('sq')
+
+            for(n=0;n<10;n++)
+        {
+             document.write(x[n]);
+            document.write("<br>");
+         }
+
+         
+         function scrollEffect()
+      {
+        if(document.documentElement.scrollTop > 570)
+        {
+            squar.style.background="yellow";
+            squar.style.left="300px";
+            squar.style.transform="rotate(360deg)";
+            squar.style.transition="1s"
+
+        }
+
+        else 
+        {
+            squar.style.background="red";
+            squar.style.left="600px";
+            squar.style.transform="rotate(0deg)";
+            squar.style.transition="1s"
+        }
+      }
+
+    </script>
+    
+
+            
+         
+   
+</body>
+</html>

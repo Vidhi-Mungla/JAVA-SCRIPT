@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+        <p id="para" class="para" name="para123"> Paragraph</p>
+        <p id="para" class="para" name="para123">Paragraph</p>
+        <p id="para" class="para" name="para123">Paragraph</p>
+        <p id="para" class="para" name="para123">Paragraph</p>
+
+        <script>
+        // ===> to get multiple elements element
+
+
+            // p_tags = document.getElementsByTagName('p');
+            // p_tags = document.getElementsByClassName('para');
+           //p_tags = document.getElementsByName('para123');
+     
+        //   p_tags =  document.querySelectorAll('.para');
+         //   p_tags =  document.querySelectorAll('#para');   
+
+
+
+        // ===> to get single element
+        // document.getElementById('idname') 
+        // document.querySelector('#idname')
+        // document.querySelector('.classname')
+
+
+        // p_tags =  document.querySelectorAll('.para');  
+        p_tags =  document.querySelectorAll('#para');  
+          
+
+            for(key=0;key<p_tags.length;key++)
+            {
+                p_tags[key].style.color ="green";
+            }
+        </script>
+</body>
+</html>

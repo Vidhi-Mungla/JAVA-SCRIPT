@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="h" class="h">Hello123</h1>
+    <h1 id="h" class="h">Hello</h1>
+    <h1 id="h" class="h">Hello</h1>
+    <h1 id="h" class="h">Hello</h1>
+    <h1 id="h" class="h">Hello</h1>
+
+
+
+    <p id="j">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia adipisci odit cumque? Sequi voluptatibus, suscipit in, culpa maxime odit dolor assumenda doloribus error unde quaerat eum earum quibusdam fugit porro.
+    </p>
+
+    <script>
+
+        p_tags = document.getElementById('j');
+        p_tags.style.color ="blue"
+
+    //    h1_tags = document.getElementById('h');
+       
+    //   h1_tags = document.getElementsByTagName('h1')
+    h1_tags = document.getElementsByClassName('h')
+
+
+      console.log(h1_tags);
+
+    //  h1_tags[0].style.color = "red";
+    //  h1_tags[1].style.color = "red";
+    //  h1_tags[2].style.color = "red";
+    //  h1_tags[3].style.color = "red";
+    //  h1_tags[4].style.color = "red";
+
+    for(i=0;i<h1_tags.length;i++)// 
+    {
+        if(i%2 == 0)
+        {
+
+              h1_tags[i].style.color = "red";
+        }
+
+        else 
+        {
+            h1_tags[i].style.color = "green";
+        }
+       
+    }
+
+    </script>
+
+    
+</body>
+</html>
