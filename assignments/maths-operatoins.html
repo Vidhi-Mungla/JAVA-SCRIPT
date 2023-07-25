@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            width: 50%;
+            padding: 5px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            flex: 1;
+            padding: 5px 5px;
+            font-size: 30px;
+            border: 1px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+        #result 
+        {
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <h1>Maths Operations</h1>
+            <label for="num1">Enter 1st number:</label>
+            <input type="number" id="num1" required>
+        </div>
+        <div class="form-group">
+            <label for="num2">Enter 2nd number:</label>
+            <input type="number" id="num2" required>
+        </div>
+        <div class="btn-container">
+            <button onclick="add()">+</button>
+            <button onclick="subtract()">-</button>
+            <button onclick="multiply()">*</button>
+            <button onclick="divide()">/</button>
+            <button onclick="modulo()">%</button>
+
+        </div><br>
+
+    Answer is: <div id="result"></div>
+    </div>
+
+    <script>
+        function add() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const result = num1 + num2;
+            document.getElementById("result").textContent = `${result}`;
+        }
+
+        function subtract() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const result = num1 - num2;
+            document.getElementById("result").textContent = `${result}`;
+        }
+
+        function multiply() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            const result = num1 * num2;
+            document.getElementById("result").textContent = `${result}`;
+        }
+
+        function divide() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            if (num2 === 0) {
+                document.getElementById("result").textContent = "Error: Cannot divide by zero!";
+            } else {
+                const result = num1 / num2;
+                document.getElementById("result").textContent = `${result}`;
+            }
+        }
+
+        function modulo() {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+            if (num2 === 0) {
+                displayError("Error: Cannot perform modulo with zero!");
+            } else {
+                const result = num1 % num2;
+                displayResult(result);
+            }
+        }
+
+        function displayResult(result) 
+        {
+            document.getElementById("result").textContent = `${result}`;
+        }
+    </script>
+</body>
+</html>

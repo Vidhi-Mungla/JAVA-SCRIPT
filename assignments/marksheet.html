@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marksheet</title>
+    <style>
+body 
+{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.container
+ {         
+    border: 2px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0px auto;
+ }
+
+.subject {
+    margin: 5px;
+    width: 50px;
+    text-align: center;
+}
+
+button {
+    margin-top: 15px;
+}
+
+.result {
+    margin-top: 20px;
+}
+span
+        {
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Marks</h1>
+        <div class="subjects">
+            <label for="subject1">1. C Language</label>
+            <input type="number" id="subject1" class="subject" max="50" min="0"> <br> <br>
+            
+            <label for="subject2">2. C++ Language</label>
+            <input type="number" id="subject2" class="subject" max="50" min="0"><br> <br>
+            
+            <label for="subject3">3. Database</label>
+            <input type="number" id="subject3" class="subject" max="50" min="0"><br> <br>
+            
+            <label for="subject4">4. HTML</label>
+            <input type="number" id="subject4" class="subject" max="50" min="0"><br> <br>
+            
+            <label for="subject5">5. CSS</label>
+            <input type="number" id="subject5" class="subject" max="50" min="0"><br> <br>
+            
+            <label for="subject6">6. Php</label>
+            <input type="number" id="subject6" class="subject" max="50" min="0"><br> <br>
+            
+            <label for="subject7">7. Core Java</label>
+            <input type="number" id="subject7" class="subject" max="50" min="0"><br> <br>
+        </div>
+        <button onclick="calculateResult()">Result</button>
+        <div class="result">
+            <p>Total is: <span id="total"></span></p>
+            <p>Percentage: <span id="percentage"></span>%</p>
+        </div>
+    </div>
+</body>
+<script>
+    function calculateResult() {
+    const subjects = document.querySelectorAll('.subject');
+    let totalMarks = 0;
+
+    subjects.forEach(subject => {
+        const marks = parseInt(subject.value) || 0;
+        totalMarks += marks;
+    });
+
+    const totalElement = document.getElementById('total');
+    const percentageElement = document.getElementById('percentage');
+
+    if (totalMarks <= 350)
+     {
+        totalElement.textContent = totalMarks;
+        const percentage = (totalMarks / 350) * 100;
+        percentageElement.textContent = percentage.toFixed(2);
+     } 
+     else 
+     {
+        alert('Total marks cannot exceed 350.');
+     }
+}
+
+</script>
+</html>
