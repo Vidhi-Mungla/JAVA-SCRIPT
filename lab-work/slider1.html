@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+        .xyz 
+        {
+            animation: scaleMe 1s;
+        }
+
+        @keyframes scaleMe 
+        {
+            100%
+            {
+                transform: scale(1.2);
+            }
+        }
+
+        div 
+        {
+            overflow: hidden;
+        } 
+    
+</style>
+<body>
+        <div>
+            <img src="img1.jpg" alt="" height="500px" width="100%">
+            <img src="img2.jpg" alt="" height="500px" width="100%">
+            <img src="i5.jpg" alt="" height="500px" width="100%">
+            <img src="i6.jpg" alt="" height="500px" width="100%">
+            <img src="i7.jpg" alt="" height="500px" width="100%">
+
+        </div>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quia dignissimos fugit totam veritatis est dicta magni voluptatum ab possimus reiciendis facilis molestias atque mollitia modi, corrupti officia, omnis cupiditate.</p>
+</body>
+<script>
+    index=0;
+   function slider()
+   {
+    images = document.getElementsByTagName('img')
+    for(i=0; i<images.length;i++)
+    {
+        images[i].style.display="none";
+    }
+
+        images[index].style.display = "block";
+        images[index].classList.add('xyz')
+        index++;
+
+        if(index>=images.length)
+        {
+            index=0;
+        }
+
+        setTimeout("slider()",1000)
+   }
+   slider()
+</script>
+</html>

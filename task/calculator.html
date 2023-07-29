@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 23px;
+            font-weight: bold;
+            font-family: cursive;
+        }
+
+        .calculator 
+        {
+            background: lightblue;
+            padding: 35px;
+            display: grid;
+            gap:20px;
+            grid-template-columns: repeat(4,1fr);
+        }
+
+        input 
+        {
+            grid-column: span 4;
+            border: none;
+            height: 40px;
+            font-size: 23px;
+            font-weight: bold;
+            font-family: cursive;
+
+        }
+        input:focus 
+        {
+            outline: none;
+        }
+        .symbol 
+        {
+            background: cornflowerblue;
+            height: 60px;
+            width: 60px;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" class="inp">
+
+            <div class="symbol" id="i1" onclick="appendToInput('%')">%</div>
+            <div class="symbol" onclick="addOperator('/')">/</div>
+            <div class="symbol" onclick="clearInput()">AC</div>
+            <div class="symbol" onclick="deleteCharacter()">DEL</div>
+
+            <div class="symbol" onclick="appendToInput('1')">1</div>
+            <div class="symbol" onclick="appendToInput('2')">2</div>
+            <div class="symbol" onclick="appendToInput('3')">3</div>
+            <div class="symbol" onclick="addOperator('+')">+</div>
+
+            <div class="symbol" onclick="appendToInput('4')">4</div>
+            <div class="symbol" onclick="appendToInput('5')">5</div>
+            <div class="symbol" onclick="appendToInput('6')">6</div>
+            <div class="symbol" onclick="addOperator('-')">-</div>
+
+            <div class="symbol" onclick="appendToInput('7')">7</div>
+            <div class="symbol" onclick="appendToInput('8')">8</div>
+            <div class="symbol" onclick="appendToInput('9')">9</div>
+            <div class="symbol" onclick="addOperator('*')">*</div>
+
+            <div class="symbol" onclick="appendToInput('0')">0</div>
+            <div class="symbol" onclick="calculateResult()">=</div>
+        </div>
+    </div>
+
+    <script>
+        const op = document.querySelector('.inp');
+
+        function appendToInput(value) 
+        {
+            op.value += value;
+        }
+
+        function addOperator(operator) 
+        {
+            op.value += ' ' + operator + ' ';
+        }
+
+        function clearInput() 
+        {
+            op.value = '';
+        }
+
+        function deleteCharacter()
+         {
+            op.value = op.value.slice(0, -1);
+         }
+
+        function calculateResult() 
+        {
+            try 
+            {
+                op.value = eval(op.value);
+            } 
+            catch (error) 
+            {
+                op.value = 'Error';
+            }
+        }
+
+    </script>
+</body>
+</html>
