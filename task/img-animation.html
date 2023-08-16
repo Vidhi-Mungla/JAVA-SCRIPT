@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  #scrollImage {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 0.5s ease-in-out;
+  }
+</style>
+</head>
+<body>
+
+<div id="scrollImage">
+  <img src="me.jpg" alt="Scrolling Image">
+
+</div>
+
+<script>
+  const imageElement = document.getElementById("scrollImage");
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    imageElement.style.top = `${scrollPosition}px`;
+  });
+</script>
+
+</body>
+</html>

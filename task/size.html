@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Change Font Size</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+<body>
+   <center>
+      <h1 style="color: green">
+         Welcome To Tutorials Point
+      </h1>
+      <button type="button" value="increase" class="increaseFont">
+         Increase Font ++
+      </button>
+      <button type="button" value="decrease" class="decreaseFont">
+         Decrease Font --
+      </button>
+      <div style="padding: 20px; margin: 50px;
+         font-size: 20px; border: 5px solid red;"
+         id="container" class="data">
+         Tutorials Point originated from the idea that there exists a class of readers who   respond better to online content and prefer to   learn new skills at their own pace from the   comforts of their drawing   rooms.
+         The journey commenced with a single tutorial on HTML in 2006 and elated by the response it generated, we worked our way to adding fresh tutorials to our repository which now proudly flaunts a wealth of tutorials and allied articles on topics ranging from programming languages to web designing to academics and much more.
+      </div>
+   </center>
+   <script type="text/javascript">
+      $(document).ready(function(){
+         $(".increaseFont,.decreaseFont").click(function(){
+            var type= $(this).val();
+            var curFontSize = $('.data').css('font-size');
+            if(type=='increase'){
+               $('.data').css('font-size', parseInt(curFontSize)+1);
+            } else{
+               $('.data').css('font-size', parseInt(curFontSize)-1);
+            }
+            // alert($('.data').css('font-size'));
+         });
+      });
+   </script>
+</body>
+</html>
