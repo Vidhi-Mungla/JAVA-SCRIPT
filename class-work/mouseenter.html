@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   #main
+   {
+    color: red;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+    cursor: pointer;
+    transition: 2s;
+   }
+</style>
+<body>
+    <div id="main" onmouseenter="modify()" onmouseleave="unmodify()">
+        Riddhi
+    </div>
+</body>
+<script>
+      function modify()
+      {
+         document.getElementById("main").style.fontSize = "100px";
+         document.getElementById("main").style.color = "blue";
+
+      }
+      function unmodify()
+      {
+         document.getElementById("main").style.fontSize = "50px";
+         document.getElementById("main").style.color = "pink";
+
+      }
+</script>
+</html>
