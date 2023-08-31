@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .parallax
+    {
+        min-height: 100vh;
+        background: linear-gradient(#333,#111);
+        position: relative;
+        overflow: hidden;
+    }
+    .parallax h1{
+        margin: 0;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+         text-align: center;
+         text-transform: uppercase;
+         font-size: 2.5em;
+         line-height: 1.4em;
+    }
+    .front-layer,.back-layer
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;      
+    }
+    .front-layer
+    {
+        z-index: 1;
+    }
+    .back-layer
+    {
+        z-index: 0;
+    }
+    .front-layer,.back-layer
+    {
+        position: absolute;
+    }
+    .front-layer img
+    {
+           box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.5);
+           max-width: 220px;
+    }
+    .back-layer img
+    {
+           box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.8);
+           max-width: 380px;
+    }
+    .front-layer img:nth-child(1)
+    {
+        top: 0;
+        left: 20%;
+        width: 16%;
+    }
+    .front-layer img:nth-child(2)
+    {
+        top: 50%;
+        left: 0%;
+        width: 13%;
+    }
+    .front-layer img:nth-child(3)
+    {
+        bottom: 0%;
+        left: 30%;
+        width: 14%;
+    }
+    .front-layer img:nth-child(4)
+    {
+        bottom: 0%;
+        right: 39%;
+        width: 12%;
+    }
+    .front-layer img:nth-child(5)
+    {
+        top: 40%;
+        right: 30%;
+        width: 11%;
+    }
+    .back-layer img:nth-child(1)
+    {
+        top: -10%;
+        right: 30%;
+        width: 30%;
+    }
+    .back-layer img:nth-child(2)
+    {
+        bottom: -20%;
+        right: 250%;
+        width: 32%;
+    }
+    .back-layer img:nth-child(3)
+    {
+        top: -10%;
+        left: 10%;
+        width: 34%;
+    }
+   
+</style>
+<body>
+   <section class="parallax">
+   <h1>
+    Parallax <br/> Hover Effect
+   </h1>
+
+   <div class="front-layer">
+    <img src="2.jpg" alt="">
+    <img src="after.jpg" alt="">
+    <img src="furniture.jpg" alt="">
+    <img src="blackmap.jpg" alt="">
+    <img src="img2.jpg" alt="">
+</div>
+
+<div class="back-layer">
+     <img src="img1.jpg" alt="">
+     <img src="img3.jpg" alt="">
+     <img src="logo.png" alt="">
+</div>
+
+
+   </section>
+
+
+
+</body>
+<script>
+
+    const parallax = document.querySelector('.parallax')
+    const front = document.querySelector('.front-layer')
+    const back = document.querySelector('.back-layer')
+
+    const sFront = 150;
+    const sBack = 400;
+
+    parallax.addEventListener('mousemove',e =>
+    {
+        const x = e.clientX;
+        const y = e.clientY;
+
+         front.style.transform =`
+         translate(
+                ${x / sFront}%,
+                ${y / sFront}%,
+         )`;
+
+         back.style.transform =`
+         translate(
+                ${x / sBack}%,
+                ${y / sBack}%,
+         )`;
+
+    });
+</script>
+</html>

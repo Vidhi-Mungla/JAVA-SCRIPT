@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="counter"></div>
+    <button id="btn">Click me</button>
+</body>
+<script>
+    var i=0;
+    document.getElementById('btn').addEventListener("click",function{
+        document.getElementById('counter').innerText = i;
+        i++;
+    })
+    document.getElementById('btn').addEventListener("mouseenter",colorred);
+      function colorred()
+      {
+        document.getElementById('counter').style.color = "red";
+      }
+      document.getElementById('btn').addEventListener("mouseleave",colorblack);
+      function colorblack()
+      {
+        document.getElementById('counter').style.color = "black";
+      }
+</script>
+</html>
