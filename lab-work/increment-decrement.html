@@ -7,14 +7,56 @@
 </head>
 <body>
     <script>
+//         First, calculate the expression inside the parentheses: (3 + 4 / 5 % 5 - 7 * 5).
+
+// Inside the parentheses, you have the following operations:
+// a. Division: 4 / 5, which equals 0.8.
+// b. Modulus (remainder): 0.8 % 5, which equals 0.8 (since 0.8 is less than 5, so there's no whole number division).
+// c. Multiplication: 7 * 5, which equals 35.
+
+// Now, we can rewrite the expression inside the parentheses with these values: (3 + 0.8 - 35).
+
+// Continue simplifying inside the parentheses:
+// a. Addition: 3 + 0.8, which equals 3.8.
+// b. Subtraction: 3.8 - 35, which equals -31.2.
+
+// Finally, assign the value to x: x = -31.2.
+
+// So, the value of x is -31.2.
 
         var x= (3+4/5%5-7*5)
         document.write(x);//-31.2
         document.write("<br>");
 
+
+
+//         First, calculate the expression inside the parentheses: (12 + 4 * 5 / 8 - 45 % 3).
+
+// Inside the parentheses, you have the following operations:
+// a. Multiplication: 4 * 5, which equals 20.
+// b. Division: 20 / 8, which equals 2.5.
+// c. Modulus (remainder): 45 % 3, which equals 0, since 45 is divisible by 3.
+
+// Now, we can rewrite the expression inside the parentheses with these values: (12 + 2.5 - 0).
+
+// Continue simplifying inside the parentheses:
+// a. Addition: 12 + 2.5, which equals 14.5.
+// b. Subtraction: 14.5 - 0, which equals 14.5.
+
+// Finally, assign the value to x: x = 14.5.
+
+// So, the value of x is 14.5.
+
         var x= (12+4*5/8-45%3)
         document.write(x);//14.5
         document.write("<br>");
+
+
+
+
+
+
+
 
         num=20
         document.write(num);//20
@@ -37,6 +79,7 @@
         
         document.write(++num);//22
         document.write("<br>");
+        
     </script>
 </body>
 </html>

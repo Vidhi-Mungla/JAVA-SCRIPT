@@ -21,34 +21,34 @@
 
 
     <script>
-        // x=1;
-        // function r()
-        // {
-        //     if(x<=10)
-        //     {
-        //         document.write(x++);
-        //         document.write("<br>")
-        //     }
-        //     r()
-        // }
-
-        // r()
-        
-
-        
-        x=10;
-
+        x=1;
         function r()
         {
-            if(x>=1)
+            if(x<=10)
             {
-                document.write(x--);
+                document.write(x++);
                 document.write("<br>")
             }
+            r()
+        }
 
         r()
-        }
-        r()
+        
+
+        
+        // x=10;
+
+        // function r()
+        // {
+        //     if(x>=1)
+        //     {
+        //         document.write(x--);
+        //         document.write("<br>")
+        //     }
+
+        // r()
+        // }
+        // r()
     </script>
 </body>
 </html>

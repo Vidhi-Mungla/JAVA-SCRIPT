@@ -25,8 +25,39 @@
         document.write("<br>")
 
 
+//  Certainly! Let's break down the JavaScript expression res = x + y - y / x + x * x step by step and solve it:
 
-    res=x+y-y/x+x*x
+// Variable Declaration: You've declared two variables, x and y, with the values 5 and 4, respectively.
+
+// Expression: x + y - y / x + x * x
+
+// Now, let's evaluate the expression step by step, following the order of operations (PEMDAS/BODMAS - Parentheses/Brackets, Exponents/Orders, Multiplication and Division, Addition and Subtraction):
+
+// a. Multiplication: x * x means 5 * 5, which equals 25.
+
+// So, the expression becomes: 5 + 4 - y / x + 25
+
+// b. Division: y / x means 4 / 5, which is 0.8.
+
+// The expression becomes: 5 + 4 - 0.8 + 25
+
+// c. Addition and Subtraction: Now, simply perform addition and subtraction from left to right.
+
+// 5 + 4 equals 9.
+
+// 9 - 0.8 equals 8.2.
+
+// Finally, 8.2 + 25 equals 33.2.
+
+// Variable Assignment: Now that we have evaluated the expression, we can assign the result to the variable res.
+
+// res is assigned the value 33.2.
+
+// So, the JavaScript code var x = 5, y = 4; res = x + y - y / x + x * x evaluates to res having the value 33.2.
+
+
+
+    res=x+y-y/x+x*x  //33.2
 
     document.write(res);
     document.write("<br>")
