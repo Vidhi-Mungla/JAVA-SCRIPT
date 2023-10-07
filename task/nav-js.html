@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Hover Effect with JavaScript</title>
+    <style>
+        nav ul {
+            list-style: none;
+            padding: 0;
+            background-color: #333;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            position: relative;
+        }
+
+        .underline-on-hover {
+            position: relative;
+        }
+
+        .underline-on-hover::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+
+        .underline-on-hover:hover::before {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="underline-on-hover">Home</a></li>
+            <li><a href="#" class="underline-on-hover">About</a></li>
+            <li><a href="#" class="underline-on-hover">Services</a></li>
+            <li><a href="#" class="underline-on-hover">Contact</a></li>
+        </ul>
+    </nav>
+    <script>
+        const links = document.querySelectorAll('.underline-on-hover');
+
+        links.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.classList.add('hovered');
+            });
+
+            link.addEventListener('mouseout', () => {
+                link.classList.remove('hovered');
+            });
+        });
+    </script>
+</body>
+</html>
