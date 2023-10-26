@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body> <header>
+    <h1>Auto Portal</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#" id="adminLink">Administrator</a></li>
+        <li><a href="#" id="sellerLink">Seller</a></li>
+        <li><a href="#" id="buyerLink">Buyer</a></li>
+    </ul>
+</nav>
+
+<div id="adminContent">
+</div>
+
+<div id="sellerContent">
+</div>
+
+<div id="buyerContent">
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const adminLink = document.getElementById("adminLink");
+    const sellerLink = document.getElementById("sellerLink");
+    const buyerLink = document.getElementById("buyerLink");
+
+    const adminContent = document.getElementById("adminContent");
+    const sellerContent = document.getElementById("sellerContent");
+    const buyerContent = document.getElementById("buyerContent");
+
+    adminLink.addEventListener("click", function () {
+        adminContent.style.display = "block";
+        sellerContent.style.display = "none";
+        buyerContent.style.display = "none";
+    });
+
+    sellerLink.addEventListener("click", function () {
+        adminContent.style.display = "none";
+        sellerContent.style.display = "block";
+        buyerContent.style.display = "none";
+    });
+
+    buyerLink.addEventListener("click", function () {
+        adminContent.style.display = "none";
+        sellerContent.style.display = "none";
+        buyerContent.style.display = "block";
+    });
+});
+
+</script>
+</html>
