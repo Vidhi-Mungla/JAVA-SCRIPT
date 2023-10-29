@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <style>
+    
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-*{
+*   
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body
+{
     width: 100%;
     height: 100vh;
     display: flex;
@@ -24,7 +27,8 @@ body{
     background: linear-gradient(45deg, #0a0a0a, #3a4452);
 }
 
-.calculator{
+.calculator
+{
     border: 1px solid #717377;
     padding: 20px;
     border-radius: 16px;
@@ -33,7 +37,8 @@ body{
 
 }
 
-input{
+input
+{
     width: 320px;
     border: none;
     padding: 24px;
@@ -46,11 +51,13 @@ input{
     color: #ffffff;
 }
 
-input::placeholder{
+input::placeholder
+{
     color: #ffffff;
 }
 
-button{
+button
+{
     border: none;
     width: 60px;
     height: 60px;
@@ -63,15 +70,20 @@ button{
     cursor: pointer;
 }
 
-.equalBtn{
+.equalBtn
+{
     background-color: #fb7c14;
 }
 
-.operator{
+.operator
+{
     color: #6dee0a;
 }
+
+
   </style>
   <body>
+
     <div class="container">
       <div class="calculator">
         <input type="text" id="inputBox" placeholder="0" />
@@ -81,18 +93,21 @@ button{
           <button class="button operator">%</button>
           <button class="button operator">/</button>
         </div>
+
         <div>
           <button class="button">7</button>
           <button class="button">8</button>
           <button class="button">9</button>
           <button class="button operator">*</button>
         </div>
+
         <div>
           <button class="button">4</button>
           <button class="button">5</button>
           <button class="button">6</button>
           <button class="button operator">-</button>
         </div>
+
         <div>
           <button class="button">1</button>
           <button class="button">2</button>
@@ -108,35 +123,46 @@ button{
         </div>
       </div>
     </div>
+</body>
+<script>
 
-  </body>
-  <script>
-    let input = document.getElementById('inputBox');
+
+let input = document.getElementById('inputBox');
 let buttons = document.querySelectorAll('button');
+
 
 let string = "";
 let arr = Array.from(buttons);
 arr.forEach(button => {
     button.addEventListener('click', (e) =>{
-        if(e.target.innerHTML == '='){
+
+        if(e.target.innerHTML == '=')
+        {
             string = eval(string);
             input.value = string;
         }
 
-        else if(e.target.innerHTML == 'AC'){
+        else if(e.target.innerHTML == 'AC')
+        {
             string = "";
             input.value = string;
         }
-        else if(e.target.innerHTML == 'DEL'){
+
+        else if(e.target.innerHTML == 'DEL')
+        {
             string = string.substring(0, string.length-1);
             input.value = string;
         }
-        else{
+
+        else
+        {
+
             string += e.target.innerHTML;
             input.value = string;
-        }
-        
+
+        }       
     })
 })
-  </script>
+
+</script>
 </html>
