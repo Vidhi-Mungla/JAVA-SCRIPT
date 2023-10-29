@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container 
-        {
+        /* Define CSS styles for the calculator */
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -16,31 +16,28 @@
             font-family: cursive;
         }
 
-        .calculator 
-        {
+        .calculator {
             background: lightblue;
             padding: 35px;
             display: grid;
-            gap:20px;
-            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
         }
 
-        input 
-        {
+        input {
             grid-column: span 4;
             border: none;
             height: 40px;
             font-size: 23px;
             font-weight: bold;
             font-family: cursive;
-
         }
-        input:focus 
-        {
+
+        input:focus {
             outline: none;
         }
-        .symbol 
-        {
+
+        .symbol {
             background: cornflowerblue;
             height: 60px;
             width: 60px;
@@ -54,6 +51,7 @@
         <div class="calculator">
             <input type="text" class="inp">
 
+            <!-- Calculator buttons with event handlers -->
             <div class="symbol" id="i1" onclick="appendToInput('%')">%</div>
             <div class="symbol" onclick="addOperator('/')">/</div>
             <div class="symbol" onclick="clearInput()">AC</div>
@@ -80,40 +78,37 @@
     </div>
 
     <script>
+        // Get the input element
         const op = document.querySelector('.inp');
 
-        function appendToInput(value) 
-        {
+        // Function to append a value to the input field
+        function appendToInput(value) {
             op.value += value;
         }
 
-        function addOperator(operator) 
-        {
+        // Function to add an operator with spaces around it
+        function addOperator(operator) {
             op.value += ' ' + operator + ' ';
         }
 
-        function clearInput() 
-        {
+        // Function to clear the input field
+        function clearInput() {
             op.value = '';
         }
 
-        function deleteCharacter()
-         {
+        // Function to delete the last character in the input field
+        function deleteCharacter() {
             op.value = op.value.slice(0, -1);
-         }
+        }
 
-        function calculateResult() 
-        {
-            try 
-            {
+        // Function to calculate the result
+        function calculateResult() {
+            try {
                 op.value = eval(op.value);
-            } 
-            catch (error) 
-            {
+            } catch (error) {
                 op.value = 'Error';
             }
         }
-
     </script>
 </body>
 </html>
