@@ -70,8 +70,6 @@ The DOM is a programming interface for web documents. It represents the structur
 
 Use document.getElementById, document.getElementsByClassName, or document.querySelector to select elements.
 Example:
-javascript
-Copy code
 let myElement = document.getElementById("myId");
 
 
@@ -82,8 +80,6 @@ let myElement = document.getElementById("myId");
 
 Change the content, style, or attributes of HTML elements.
 Example:
-javascript
-Copy code
 myElement.innerHTML = "New Content";
 
 
@@ -94,8 +90,6 @@ myElement.innerHTML = "New Content";
 
 Use event listeners to respond to user interactions.
 Example:
-javascript
-Copy code
 myElement.addEventListener("click", function() {
   alert("Element clicked!");
 });
@@ -109,8 +103,6 @@ myElement.addEventListener("click", function() {
 
 Create new elements and append them to the DOM.
 Example:
-javascript
-Copy code
 let newElement = document.createElement("div");
 document.body.appendChild(newElement);
 
@@ -122,8 +114,6 @@ document.body.appendChild(newElement);
 
 Change the style of elements using JavaScript.
 Example:
-javascript
-Copy code
 myElement.style.color = "blue";
 These are just the basics, and there is much more to explore in both JavaScript and the DOM. Practice and hands-on coding are essential for gaining proficiency.
 
@@ -141,8 +131,6 @@ Certainly! When working on website design and incorporating JavaScript with the 
 1. HTML Structure:
 Start with a basic HTML structure for your webpage. Include the necessary elements such as <html>, <head>, <title>, <body>, and any other elements you need for your content.
 
-html
-Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -173,8 +161,6 @@ Copy code
 Create a JavaScript file (e.g., your_script.js) and link it to your HTML file. Here, you can interact with the DOM to modify elements, handle events, and create dynamic behavior.
 
 Example JavaScript (your_script.js):
-javascript
-Copy code
 // Accessing an element by ID
 let mainContent = document.getElementById("mainContent");
 
@@ -200,8 +186,6 @@ mainContent.addEventListener("click", function() {
 Enhance the visual appeal of your website by styling it with CSS. You can either include your styles directly in the HTML file or link to an external CSS stylesheet.
 
 Example CSS (styles.css):
-css
-Copy code
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
