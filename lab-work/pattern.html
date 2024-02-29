@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+// let pattern = "";
+
+// for (let n = 1; n <= 5; n++)
+//  {
+//    for (let num = 1; num <= n; num++) 
+//    {
+//       pattern += num;
+//    }
+
+//    pattern += "\n";
+// }
+// console.log(pattern);
+
+
+
+
+
+
+
+// let pattern = "";
+
+// for (let n = 1; n <= 5; n++) {
+//    for (let num = 1; num <= n; num++) {
+//       pattern += n;
+//    }
+
+//    pattern += "\n";
+// }
+// console.log(pattern);
+
+
+
+
+let n = 5; // you can take input from prompt or change the value
+    let string = "";
+    for (let i = 1; i <= n; i++) {
+      // printing spaces
+      for (let j = 0; j < n - i; j++) {
+        string += " ";
+      }
+      // printing star
+      for (let k = 0; k < i; k++) {
+        string += "*";
+      }
+      string += "<br>";
+    }
+    document.write(`<pre>${string}</pre>`);
+
+
+
+
+
+// let n = 5; // you can take input from prompt or change the value
+//     let string = "";
+//     for (let i = 0; i < n; i++) {
+//       for (let j = 0; j <= i; j++) {
+//         string += "*";
+//       }
+//       string += "<br>";
+//     }
+//     document.write(string);
+
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+
+
+
+// let n = 5; // you can take input from prompt or change the value
+//     let string = "";
+//     // External loop
+//     for (let i = 1; i <= n; i++) {
+//       // printing spaces
+//       for (let j = n; j > i; j--) {
+//         string += " ";
+//       }
+//       // printing star
+//       for (let k = 0; k < i * 2-1; k++) {
+//         string += "*";
+//       }
+//       string += "<br>";
+//     }
+//     document.write(`<pre>${string}</pre>`); 
+
+//        *
+//      * * *
+//    * * * * *
+//  * * * * * * *
+// * * * * * * * * *
+
+ </script>
+    
+</body>
+</html>
